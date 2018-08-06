@@ -1,37 +1,10 @@
-## Welcome to GitHub Pages
+## Namrata Narain
 
-You can use the [editor on GitHub](https://github.com/namsaxena/namsaxena.github.io/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+Hello! I am a Post-Baccalaureate Fellow for Professor Claudia Goldin at the National Bureau of Economic Research and the Harvard University Department of Economics. 
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+I am interested in labor economics of the [Kremer-Kaur variety](http://cega.berkeley.edu/assets/cega_events/17/self-control_at_work.pdf). What makes workers productive? How binding are contracts on human behavior? Why do so few women in India [work](https://www.economist.com/leaders/2018/07/05/why-india-needs-women-to-work)? How do workers find [jobs](http://www.surveyor.nber.org/home/harvard/library/MontgomeryAER.pdf)? Can lower skilled workers be trained effectively to get and maintain good [jobs](http://www.surveyor.nber.org/home/harvard/library/MontgomeryAER.pdf)? Might the lower outcomes for minorities be driven by worker _worker_ [discrimination](https://scholar.harvard.edu/files/fryer/files/two-sided_discrimination.pdf)? More generally, I am interested in the origin and evolution of [culture](https://dash.harvard.edu/bitstream/handle/1/11986331/nunn-slave-trade.pdf?sequence=1) and [institutions](https://economics.mit.edu/files/4469).
 
-### Markdown
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+### Contact
 
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/namsaxena/namsaxena.github.io/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+My email address is nnarains [at] gmail [dot] com.
