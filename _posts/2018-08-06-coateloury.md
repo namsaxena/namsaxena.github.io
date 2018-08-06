@@ -13,7 +13,7 @@ Here are the images that are generated:
 
 ## Existence of Multiple Equilibria
 
-![existence](PatronizingEqAA_decrho.png)
+<div><img src="https://github.com/namsaxena/namsaxena.github.io/blob/master/images/BenignEqAA_nondecrho.png" alt="existence"></div> 
 
 ```markdown
 %%
