@@ -11,7 +11,7 @@ this code to explain the model alongside the code.
 
 Here are the images that are generated:
 
-![multipleeq](images/PatronizingEqAA_decrho.png?raw=true){:class="img-responsive"}
+![multipleeq](https://github.com/namsaxena/namsaxena.github.io/images/PatronizingEqAA_decrho.png)
 
 ```markdown
 %%
