@@ -6,10 +6,12 @@ date: 2018-08-06
 
 Ever wondered how you would generate the images in the seminal paper on statistical discrimination, [Coate and Loury (1993)](https://www.jstor.org/stable/2117558)?
 
-The following code is a simulation of the model and generates the paper's images -- existence of multiple equilibria as well
-as statistical discrimination under affirmative action. If I find time in the near future, I will comment
-this code to explain the model alongside.
+The following code is a simulation of the model and generates the paper's images -- existence of multiple equilibria and benign+patronizing equilibria in the presence of affirmative action. If I find time in the near future, I will comment
+this code to explain the model alongside the code.
 
+Here are the images that are generated:
+
+![multipleeq](/images/PatronizingEqAA_decrho.jpg){:class="img-responsive"}
 
 ```markdown
 %%
