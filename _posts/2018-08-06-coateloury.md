@@ -11,7 +11,7 @@ this code to explain the model alongside the code.
 
 Here are the images that are generated:
 
-![multipleeq](/images/PatronizingEqAA_decrho.jpg){:class="img-responsive"}
+![multipleeq]({{ "/images/PatronizingEqAA_decrho.png" | absolute_url }}){:class="img-responsive"}
 
 ```markdown
 %%
