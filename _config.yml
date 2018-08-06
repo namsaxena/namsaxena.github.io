@@ -1,3 +1,5 @@
 theme: jekyll-theme-minimal
 
 title: Namrata Narain
+
+markdown: kramdown
