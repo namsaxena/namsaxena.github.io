@@ -3,3 +3,5 @@ theme: jekyll-theme-minimal
 title: Namrata Narain
 
 markdown: kramdown
+
+permalink: /blog/:year/:month/:day/:title
