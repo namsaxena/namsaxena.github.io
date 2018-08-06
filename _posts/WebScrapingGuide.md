@@ -1,5 +1,10 @@
+---
+layout: post
+title: "Web Scraping Guide (for absolute novices)"
+date: 2018-08-06
+---
 
-In this document, I provide a step-by-step guide to web scraping. I started from scratch with no understanding of either Python or web scraping, so this manual is for true novices.
+In this document, I provide a step-by-step guide to web scraping. I started from scratch with no understanding of either Python or web scraping, so this manual is for true beginners.
 
 The document is organized as follows:
 
