@@ -11,7 +11,11 @@ this code to explain the model alongside the code.
 
 Here are the images that are generated:
 
-![multipleeq](PatronizingEqAA_decrho.png)
+![existence](PatronizingEqAA_decrho.png)
+
+![patronizing](PatronizingEqAA_nondecrho.png)
+
+![benign](BenignEqAA_nondecrho.png)
 
 ```markdown
 %%
