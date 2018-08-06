@@ -11,11 +11,9 @@ this code to explain the model alongside the code.
 
 Here are the images that are generated:
 
+## Existence of Multiple Equilibria
+
 ![existence](PatronizingEqAA_decrho.png)
-
-![patronizing](PatronizingEqAA_nondecrho.png)
-
-![benign](BenignEqAA_nondecrho.png)
 
 ```markdown
 %%
@@ -85,8 +83,13 @@ h4=plot(outs,pi_b)
 xlim([0 1])
 title("Multiple Equilbria")
 %plot(pi_b,outs);
+``` 
  
- 
+```markdown
+
+## Patronizing Equilibria Under Affirmative Action
+![patronizing](PatronizingEqAA_nondecrho.png)
+
 %%
 %Section2: Coate and Loury with AA, non-decreasing rho_hat
 %set constants
@@ -240,7 +243,13 @@ str='$$\pi_b=0.068, s_b=0.20, \pi_w=0.632, s_w=0.288,\hat{\rho}=0.678$$';
 text(0.25,-1.6,str,'Interpreter','latex')
 saveas(gcf,'PatronizingEqAA_nondecrho.png')
  
+```
  
+
+## Benign Equilibria Under Affirmative Action
+```markdown
+![benign](BenignEqAA_nondecrho.png)
+
 %%
 %Section3: Coate and Loury with AA, non-decreasing rho_hat->Benign eq
 %set constants
@@ -394,148 +403,5 @@ title('$$\hat{\rho}$$','Interpreter','Latex')
 str='$$(\pi_1=0.606,s_1=0.284,\hat{\rho_2}=0.667), (\pi_2=0.173, s_2=0.637,\hat{\rho_1}=0.073)$$';
 text(0.2,-1.6,str,'Interpreter','latex')
 saveas(gcf,'BenignEqAA_nondecrho.png')
- 
-%%
-%Section4: Coate and Loury with AA, decreasing rho_hat
- 
-%plotting EE curves under AA
-%set constants
-theta=0:0.01:1;
-omega=5;
-chi_q=6;
-chi_u=5;
-pi_b=0:0.01:1;
-gamma=0;
-lambda=0.94;
- 
-%Define useful functions
-f_q = @(s) pdf('Beta',s,2,2);
-f_u = @(s) pdf('Beta',s,2,5);
-F_q = @(s) cdf('Beta',s,2,2);
-F_u = @(s) cdf('Beta',s,2,5);
-G = @(s) cdf('Lognormal',s,0.5,0.35);
-    for i=1:length(pi_b)
-        f_ucons=f_u(theta);
-        f_qcons=f_q(theta);
-        %f_q=unifpdf(theta,theta_q,1);
-        %f_u=unifpdf(theta,0,theta_u);
-        lr=f_ucons./f_qcons;
-        val=pi_b(i);
-        pi=(1-pi_b(i))/(pi_b(i));
-         
-        %white people
-        r_w=(chi_q-(gamma/lambda))/(chi_u+(gamma/lambda));
-        %for every value of pi, check&store the thetas s.t. return>=lr*belief
-        mult_w=pi.*lr;
-        ret(1:101)=r_w;
-        %standard:choose the minimum theta such that r>=mult
-        mat=[ret;mult_w;theta]';
-        subset=mat(mat(:,1)>=mat(:,2),3);
-        standard=min(subset);
-        %now,calculate net benefit
-        %benefit=omega*[unifcdf(standard,0,theta_u)-unifcdf(standard,theta_q,1)];
-        benefit=omega*[F_u(standard)-F_q(standard)];
-        %now that I have benefit, I can calculate proportion of population
-        pi_ww = G(benefit); 
-        %pi_ww=unifcdf(benefit,0,1);
-        if ~isempty(pi_ww)
-            outpi_w(i) = pi_ww;
-            outs_w(i) = standard;
-        else
-            outpi_w(i) = NaN;
-            outs_w(i) = NaN;
-        end
-         
-        %black people
-        r_b=(chi_q+(gamma/(1-lambda)))/(chi_u-(gamma/(1-lambda)));
-         %for every value of pi, check&store the thetas s.t. return>=lr*belief
-        mult_b=pi.*lr;
-        ret(1:101)=r_b;
-        %standard:choose the minimum theta such that r>=mult
-        mat=[ret;mult_b;theta]';
-        subset=mat(mat(:,1)>=mat(:,2),3);
-        standard=min(subset);
-        %now,calculate net benefit
-        %benefit=omega*[unifcdf(standard,0,theta_u)-unifcdf(standard,theta_q,1)];
-        benefit=omega*[F_u(standard)-F_q(standard)];
-        %now that I have benefit, I can calculate proportion of population
-        pi_bb=G(benefit); 
-        %pi_ww=unifcdf(benefit,0,1);
-        if ~isempty(pi_ww)
-            outpi_b(i) = pi_bb;
-            outs_b(i) = standard;
-        else
-            outpi_b(i) = NaN;
-            outs_b(i) = NaN;
-        end
-         
-        %gamma=0
-        r=chi_q/chi_u;
-        %for every value of pi, check&store the thetas s.t. return>=lr*belief
-        mult=pi.*lr;
-        ret(1:101)=r;
-        %standard:choose the minimum theta such that r>=mult
-        mat = [ret;mult;theta]';
-        subset=mat(mat(:,1)>=mat(:,2),3);
-        standard=min(subset);
-        %now,calculate net benefit
-        %benefit=omega*[unifcdf(standard,0,theta_u)-unifcdf(standard,theta_q,1)];
-        benefit=omega*[F_u(standard)-F_q(standard)];
-        %now that I have benefit, I can calculate proportion of population
-        pi_ww = G(benefit); 
-        %pi_ww=unifcdf(benefit,0,1);
-        if ~isempty(pi_ww);
-            outpi(i) = pi_ww;
-            outs(i) = standard;
-        else
-            outpi(i) = NaN;
-            outs(i) = NaN;
-        end;
-        if pi_ww==pi_b(i)
-           temp(i)=pi_ww;
-        end
-         
-    end 
-     
-[x0,y0]=intersections(outs,outpi,outs_b,pi_b);
-[x1,y1]=intersections(outs,outpi,outs_w,pi_b);
-sb=x0(1)
-pib=y0(1)
-sw=x1(1)
-piw=y1(1)
-benefit_b=omega*(F_u(sb)-F_q(sb));
-benefit_w=omega*(F_u(sw)-F_q(sw));
-rho_hat_b=(G(benefit_b)*(1-F_q(sb))+(1-G(benefit_b)+0.05))*(1-F_u(sb))
-rho_hat_w=(G(benefit_w)*(1-F_q(sw))+(1-G(benefit_w)+0.05))*(1-F_u(sw))
- 
-%h1=plot(pi_b,outpi);hold on;
-%h2=plot(pi_b,pi_b)
-%title("Fixed Point")
-figure
-subplot(2,1,2)
-set(groot,'DefaultAxesColorOrder',[0 0 0])
-h3=plot(outs,outpi);hold on;
-h4=plot(outs_b,pi_b);hold on;
-h5=plot(outs_w,pi_b);hold on;
-set([h3 h4 h5],'Linewidth',1.5)
-xlim([0 1])
-title("Multiple Equilbria")
- 
-%plot rho_hat
-F_ucons=F_u(outs_w);
-F_qcons=F_q(outs_w);
- 
-diff=F_ucons-F_qcons;
- 
-benefit=omega.*diff;
-prop=G(benefit);
-rho_hat=prop.*[1-F_qcons]+(1-prop).*[1-F_ucons];
-subplot(2,1,1)
-h6=plot(outs_w,rho_hat)
-set([h6],'Linewidth',1.5)
-xlim([0 1])
-title('$$\hat{\rho}$$','Interpreter','Latex')
-str='$$(\pi_1=0.595,s_1=0.295),(\pi_2=0.123,s_2=0.687)$$'
-text(0.25,-1.6,str,'Interpreter','latex')
-saveas(gcf,'EqAA_decrho.png')
-```
+``` 
+
