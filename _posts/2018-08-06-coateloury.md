@@ -85,11 +85,9 @@ title("Multiple Equilbria")
 %plot(pi_b,outs);
 ``` 
  
+ ## Patronizing Equilibria Under Affirmative Action
+![patronizing](PatronizingEqAA_nondecrho.png) 
 ```markdown
-
-## Patronizing Equilibria Under Affirmative Action
-![patronizing](PatronizingEqAA_nondecrho.png)
-
 %%
 %Section2: Coate and Loury with AA, non-decreasing rho_hat
 %set constants
@@ -247,9 +245,9 @@ saveas(gcf,'PatronizingEqAA_nondecrho.png')
  
 
 ## Benign Equilibria Under Affirmative Action
-```markdown
-![benign](BenignEqAA_nondecrho.png)
 
+![benign](BenignEqAA_nondecrho.png)
+```markdown
 %%
 %Section3: Coate and Loury with AA, non-decreasing rho_hat->Benign eq
 %set constants
