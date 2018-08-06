@@ -11,7 +11,7 @@ this code to explain the model alongside the code.
 
 Here are the images that are generated:
 
-![multipleeq](https://github.com/namsaxena/namsaxena.github.io/images/PatronizingEqAA_decrho.png)
+![multipleeq](namsaxena.github.io/images/PatronizingEqAA_nondecrho.png)
 
 ```markdown
 %%
