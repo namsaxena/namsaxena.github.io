@@ -13,7 +13,7 @@ Here are the images that are generated:
 
 ## Existence of Multiple Equilibria
 
-<div><img src="https://namsaxena.github.io/images/PatronizingEqAA_nondecrho.png" alt="existence" /></div> 
+<div><img src="https://namsaxena.github.io/images/PatronizingEqAA_decrho.png" /></div> 
 
 ```markdown
 %%
@@ -86,7 +86,7 @@ title("Multiple Equilbria")
 ``` 
  
 ## Patronizing Equilibria Under Affirmative Action
-<div><img src="https://github.com/namsaxena/namsaxena.github.io/blob/master/images/PatronizingEqAA_nondecrho.png" alt="patronizing" /></div> 
+<div><img src="https://namsaxena.github.io/images/PatronizingEqAA_nondecrho.png" /></div> 
 
 ```markdown
 %%
@@ -247,7 +247,7 @@ saveas(gcf,'PatronizingEqAA_nondecrho.png')
 
 ## Benign Equilibria Under Affirmative Action
 
-<div><img src="https://github.com/namsaxena/namsaxena.github.io/blob/master/images/BenignEqAA_nondecrho.png" alt="benign" /></div> 
+<div><img src="https://namsaxena.github.io/images/BenignEqAA_nondecrho.png" alt="benign" /></div> 
 
 ```markdown
 %%
