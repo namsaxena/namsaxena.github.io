@@ -85,7 +85,7 @@ title("Multiple Equilbria")
 %plot(pi_b,outs);
 ``` 
  
- ## Patronizing Equilibria Under Affirmative Action
+## Patronizing Equilibria Under Affirmative Action
 <div><img src="https://github.com/namsaxena/namsaxena.github.io/blob/master/images/PatronizingEqAA_nondecrho.png" alt="patronizing"></div> 
 
 ```markdown
