@@ -77,7 +77,7 @@ If you want to run a Python command on its own, go into the Python environment. 
 * Copy paste the following lines of code. Each line of code imports a package.  
 
 
-```python
+```markdown
 from bs4 import BeautifulSoup, SoupStrainer
 import re
 import requests
@@ -94,7 +94,7 @@ start_time = time.time()
 * Great, now let's pass in the url that we want to scrape.
 
 
-```python
+```markdown
 url = "http://reviews.greatplacetowork.com/salesforce"
 ```
 
@@ -102,7 +102,7 @@ url = "http://reviews.greatplacetowork.com/salesforce"
 * For fun, type each line of code so far in the Python environment to see what each command is doing. Typing soup will print a jumble of html gibberish on your screen. soup.prettify() will format it to make it more readable!
 
 
-```python
+```markdown
 page = requests.get(url)
 soup = BeautifulSoup(page.content,'html.parser')
 print(soup.prettify())
@@ -115,7 +115,7 @@ print(soup.prettify())
 * When you run this, a new Chrome window will pop up with your url.
 
 
-```python
+```markdown
 browser = webdriver.Chrome("/Users/namratanarain/Dropbox/Goldin/WebScraping/chromedriver.exe")
 browser.get(url)
 html = browser.page_source
@@ -130,7 +130,7 @@ browser.quit()
 * Sometimes, you'll get lots of spaces like /t or blank lines /n in your text. Typing strip=True in parentheses strips the text of these unnecessary characters
 
 
-```python
+```markdown
 name = soup.find("title").get_text()
 name = soup.find("title").get_text(strip=True)
 ```
@@ -139,7 +139,7 @@ name = soup.find("title").get_text(strip=True)
 * I use try-except to assign empty values to variables since I will be later passing on everything to Excel
 
 
-```python
+```markdown
 # preliminary information
 try:
     name = soup.find("title").get_text()
@@ -151,7 +151,7 @@ except Exception:
 * Remember that .find returns the first element that matches your criterion. On the other hands, .find_all returns the entire LIST of all elements that match your criterion. As in all lists, you can use indexing to access a particular element. For example, the following code will return the first tag of the type $<h3>...</h3>$ from the several that exist on this website.
 
 
-```python
+```markdown
 soup.find_all("h3")[0]
 ```
 
@@ -159,7 +159,7 @@ soup.find_all("h3")[0]
 * At the bottom of the code, I describe how to export these values to an Excel sheet.
 
 
-```python
+```markdown
 # About This Company
 try:
     searchtext = re.compile(r'about this company',re.IGNORECASE)
@@ -409,8 +409,7 @@ except Exception:
 * Now that we have stored all the variables we need, let's export them to Excel
 * I have already initialized an Excel file (the .py code for that file is in the main directory) 
 
-
-```python
+```markdown
 # Export information to Excel
 wb = load_workbook("/Users/namratanarain/Dropbox/Goldin/WebScraping/gptw1.xlsx")
 ws = wb.worksheets[0]
@@ -429,7 +428,7 @@ time.sleep(2)
 * I print the number of seconds it took me to run this code so I know how much time it will take me to scrape *n* websites.
 
 
-```python
+```markdown
 print("--- %s seconds ---" % round((time.time()-start_time)))
 ```
 
@@ -440,7 +439,7 @@ I wanted to scrape all this information for all the companies on this website. K
 Inspect the site carefully! All the urls I need are stored in $<loc>$ tags. I made a list of all the $<loc>$ tags on this site and looped through each. How would you do this?
 
 
-```python
+```markdown
 page = requests.get("http://reviews.greatplacetowork.com/index.php?option=com_gptw&view=sitemap&format=xml")
 soup = BeautifulSoup(page.content,'html.parser')
 firms = soup.find_all('loc')
