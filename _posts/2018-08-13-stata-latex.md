@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Export Stata Output to Latex"
-date: 2018-13-06
+date: 2018-08-13
 ---
 
 Following is a sample do-file that exports Stata output to a pretty Latex table.
