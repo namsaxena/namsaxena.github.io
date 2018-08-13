@@ -45,7 +45,7 @@ cap log close ;
 	
 	log using "$log_root\log_`filename'_`tstamp'.txt", text replace ;
   
-  ***** end preamble ***** ;
+ 	***** end preamble ***** ;
 	
 	***** Set Up *************
 	************************** ;
