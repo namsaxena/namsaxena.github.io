@@ -6,13 +6,10 @@ date: 2018-08-13
 
 Following is a sample do-file that exports Stata output to a pretty Latex table.
 
-Exporting Stata output to Latex tables is relatively straightforward. If you want to make a complicated table in Latex with output from various
-regressions or report summary statistics for many variables, by treatment assignment, you can use the following do-file as a starting point and 
-modify it according to your needs. I have shared this code with RAs at the National Bureau of Economic Research because I think it's a
-painless way to make tables.
+Exporting Stata output to Latex is relatively straightforward. I find this to be the easiest way to make a complicated table with output from various
+regressions or summary statistics for many variables, sometimes by treatment assignment.
 
-Declaration: This code did not originate with me. I received a bare-bones template of how to export Stata macros into Latex several moons ago so I am 
-passing it on as public service.
+Declaration: This code did not originate with me. I received a bare-bones template of how to export Stata macros into Latex several moons ago so I am passing it on as public service. I am sure this is not the only or even a novel way to export to Latex but I have shared this code with other RAs at the National Bureau of Economic Research who have found this to be an effective way to produce output.
 
 Notice that I use a semicolon (;) delimiter.
 
@@ -155,10 +152,7 @@ cap log close ;
 		"\end{longtable}" _n
 		"\begin{tabular}{ p{5in} }" _n
 		"\footnotesize" _n
-		"Notes: This table provides industry-level summary statistics of data
-		scraped from www.greatplacetowork.com. Industry assignments
-		are made according to SIC codes that I assigned to each company 
-		manually.\\" 
+		"Notes:XXX \\" 
 		"\end{tabular}" _n
 		"\end{center}" _n
 		"\end{document}" _n ;
